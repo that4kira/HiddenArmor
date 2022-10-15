@@ -40,7 +40,7 @@ public class HiddenArmorCommand {
     }
 
     public void help(CommandSender sender){
-        sender.sendMessage(StrUtil.color("&6----------[ &fHiddenArmor &6]-----------------"));
+        sender.sendMessage(StrUtil.color("&6----------[ &fᴍᴏᴅᴏ ᴇsʙᴇʟᴛᴏ &6]-----------------"));
 
         // togglearmor
         if(canUse(sender, "hiddenarmor.toggle") || plugin.isToggleDefault())
