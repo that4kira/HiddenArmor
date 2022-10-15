@@ -36,7 +36,7 @@ public class ToggleArmorCommand {
                     player = Bukkit.getPlayer(playerName);
 
                     if(player==null){
-                        sender.sendMessage(plugin.getPrefix() + "Player not found.");
+                        sender.sendMessage(plugin.getPrefix() + "Jogador não encontrado.");
                         return true;
                     }
                 }else {
@@ -53,14 +53,14 @@ public class ToggleArmorCommand {
                     visibility =  StrUtil.color("&7OFF") ;
                 }
 
-                if(!player.equals((Player) sender)) sender.sendMessage(player.getName() + "'s armor visibility': " + visibility);
+                if(!player.equals((Player) sender)) sender.sendMessage(player.getName() + "' agora tem sua armadura': " + visibility);
 
-                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent("Armor visibility: " + visibility));
+                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent("Visibilidade da armadura: " + visibility));
 
                 armorManager.updatePlayer(player);
 
                 return true;
             }
-        }.setCPermission("toggle").setUsage("/togglearmor").setDescription("Toggle armor invisibility");
+        }.setCPermission("toggle").setUsage("/togglearmor").setDescription("Ligar invisibilidade da armadura.");
     }
 }
